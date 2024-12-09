@@ -1,0 +1,2 @@
+# halbwissen
+Podcast Bernzen
