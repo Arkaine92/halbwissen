@@ -27,6 +27,10 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/custom.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
  
 </head>
 
@@ -727,8 +731,8 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="mb-5">
-          <iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen=""></iframe>
-        </div><!-- End Google Maps -->
+          <div id="map"></div>
+        </div>
 
         
 
@@ -801,6 +805,29 @@
 
   <!-- Font Awesome JS -->
   <script src="https://kit.fontawesome.com/f56b2d690a.js" crossorigin="anonymous"></script>
+
+  <!-- Interactive Map -->
+  <script>
+    // Karte initialisieren
+    const map = L.map('map').setView([51.1657, 10.4515], 6); // Deutschland
+
+    // OpenStreetMap Tiles hinzufügen
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Beispielmarker hinzufügen
+    const marker = L.marker([52.5200, 13.4050]).addTo(map); // Berlin
+    marker.bindPopup("<b>Lost Place: Verlassene Fabrik</b><br>Standort in Berlin.");
+
+    // Marker 2 hinzufügen (Hamburg)
+    const marker2 = L.marker([53.54989863364347, 9.991281790030863]).addTo(map);
+    marker2.bindPopup("<b>Handelskammer Hamburg</b><br>Standort in Hamburg.");
+
+    // Marker 2 hinzufügen (Hamburg)
+    const marker3 = L.marker([53.64076640003558, 10.163760603241045]).addTo(map);
+    marker3.bindPopup("<b>Volksdorfer Wald</b><br>Standort in Hamburg.");
+  </script>
 
 </body>
 
