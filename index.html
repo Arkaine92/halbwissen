@@ -31,6 +31,25 @@
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const audio = document.getElementById("audio-player");
+        const audioButton = document.getElementById("audio-toggle");
+
+        audioButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Verhindert unerwünschte Navigation
+
+            if (audio.paused) {
+                audio.play();
+                audioButton.innerHTML = ""; // Ändert Symbol auf Pause
+            } else {
+                audio.pause();
+                audioButton.innerHTML = ""; // Ändert Symbol auf Play
+            }
+        });
+    });
+</script>
+
  
 </head>
 
@@ -120,10 +139,20 @@
         <div class="row gy-4">
           <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
             <div class="position-relative">
-              <img src="assets/img/paul-hinrich-about.jpg" class="img-fluid mb-4" alt="">
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+                <img src="assets/img/paul-hinrich-about.jpg" class="img-fluid mb-4" alt="">
+        
+                <!-- MP3-Play/Pause-Button -->
+                <button id="audio-toggle" class="pulsating-play-btn"></button>
+              
             </div>
-          </div>
+        
+            <!-- Versteckter Audio-Player -->
+            <audio id="audio-player">
+                <source src="assets/audio/about-halbwissen.mp3" type="audio/mp3">
+                Dein Browser unterstützt kein Audio-Tag.
+            </audio>
+        </div>
+        
           <div class="col-lg-5" data-aos="fade-up" data-aos-delay="250">
             <div class="content ps-0 ps-lg-5">
               <p>
