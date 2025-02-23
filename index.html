@@ -440,6 +440,15 @@
         font-size: 0.9em;
         line-height: 1.4;
       }
+
+      .description-overlay {
+        pointer-events: none; /* Deaktiviert Klicks für das gesamte Overlay */
+      }
+
+      .description-overlay button {
+        pointer-events: auto !important; /* Erlaubt Klicks speziell für den Button */
+        z-index: -10;
+      }
     </style>
     
     <!-- Chefs Section -->
@@ -466,12 +475,15 @@
                   <p>Der Mann für den Influenza immer noch eine ansteckende Krankheit ist.</p>
                   <p>Das Kind der Liebe von Spiegel online und der Apothekenumschau.</p>
                   <p>Der einzig würdige Nachfolger von Marcel Reich-Ranitzki und Fips Asmussen.</p>
-                  <p style="font-weight: bold; color: white;">Mehr Erfahren-></p>
+
                 </div>
               </div>
               <div class="member-info">
                 <h4>Paul</h4>
                 <span>Host</span>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalPaul">
+                  Mehr Erfahren
+                </button>
               </div>
             </div>
           </div><!-- End Team Member: Paul -->
@@ -489,18 +501,144 @@
                   <p>Er fordert seit Jahrzehnten die Rückkehr von Alexander Ristic als Co-Trainer – denn früher war alles besser.</p>
                   <p>Seine Tierliebe ist legendär, muss lediglich noch entdeckt werden.</p>
                   <p>Er ist seit seiner Kindheit viel auf der Straße, denn das wahre Podcast-Gold findet er im Dreck. Und Straßen sind aus Dreck gebaut.</p>
-                  <p style="font-weight: bold; color: white;">Mehr Erfahren-></p>
                 </div>
               </div>
               <div class="member-info">
                 <h4>Hinrich</h4>
                 <span>Host</span>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalHinrich">
+                  Mehr Erfahren
+                </button>
               </div>
             </div>
           </div><!-- End Team Member: Hinrich -->
     
         </div>
       </div>
+
+      <!-- Modal - Mehr Informationen -->
+
+      <div class="modal fade" id="ModalPaul" tabindex="-1" aria-labelledby="ModalPaulLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="ModalPaulLabel">Weitere Informationen</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+            </div>
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <div class="row">
+                <!-- Bild von Paul -->
+                <div class="col-md-4 offset-md-4 mb-3 mt-2">
+                  <img src="assets/img/chefs/paul-2.jpg" class="img-fluid" alt="Paul">
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <!-- Ausführliche Vorstellung -->
+                <div class="col-md-12">
+                  <p>Wortgewandter als Mario Basler, kontroverser als Günther Jauch, gebildeter als Thorsten Legat und angesehener als Gerhard Schröder.</p>
+                  <p style="text-align: right;">Ein Höhepunkt der norddeutschen Tiefebene.</p>
+                  <p>Die deutsche Antwort auf Jeremy Clarkson.</p>
+                  <p>Der Mann, für den Influenza immer noch eine ansteckende Krankheit ist.</p>
+                  <p>Das Kind der Liebe von Spiegel online und der Apothekenumschau.</p>
+                  <p>Der einzig würdige Nachfolger von Marcel Reich-Ranitzki und Fips Asmussen.</p>
+                  <p>Der Mann, der Leo Trotzki seinen Bart erfand.</p>
+                  <p>Der einzige, von dem selbst Checker Tobi noch etwas lernen kann.</p>
+                  <p>Einer, der für seine Reisen dahin geht, wo es wirklich weh tut.</p>
+                  <p>Bei dem Sport immer Hand und Fuß hat.</p>
+                  <p>Der Mann, für den Paul Panzer Pazifist und Paul von Hindenburg Feldmarschall geworden ist.</p>
+                  <p>Der Gagschreiber von Ralf Stenger.</p>
+                  <p>Das dritte Deichkind.</p>
+                  <p>Er ist dem Jurassic Park ohne fremde Hilfe entkommen.</p>
+                  <p>Der Streitschlichter von Untertürkheim und Zuffenhausen.</p>
+                  <p>Das Egg Benedict unter den Landeiern.</p>
+                  <p>Der aufgehende Genderstern.</p>
+                  <p>Einer, der mehr Länderpunkte als ein ausgewachsener Marienkäfer hat.</p>
+                  <p>Der Mann, der Kryptonit als Aufputschmittel nimmt.</p>
+                  <p>Einer, dem man nichts mehr Verwaltungsrecht machen kann.</p>
+                  <p>Die schönste Solostimme im diplomatischen Chor.</p>
+                  <p>Derjenige, der auf den Punkt kommt, wenn die Fläche nur groß genug ist.</p>
+                  <p>Der blau-weiße Revierförster.</p>
+                  <p>Zweifacher Vater der Nation.</p>
+                  <p>Für den sich das Stahlbad des Bremer Umlands wie eine Eistonne angefühlt hat.</p>
+                  <p>Der Mann, der das Salz nach Lüneburg brachte.</p>
+                  <p>Die Herdplatte für den heißen Brei.</p>
+                  <p>Der Frisör von Pommes Hens.</p>
+                  <p>Und Bürgermeister von Stenkelfeld,</p>
+                  <p>Einer, der mehr Cedes fährt als alle anderen,</p>
+                  <p>Der seinem Hund aufs Wort gehorcht,</p>
+                  <p>Einer der ganz wenigen, der auch in Südeuropa alles am Balkan macht,</p>
+                  <p>Der Nachrichtenchef von Bollerwagen,fm,</p>
+                  <p>Endspurt</p>
+                  <p>Der Allradgeber für jede Lebenslage,</p>
+                  <p>Der Botenstoff der guten Laune,</p>
+                  <p>Das Tischfeuerzeug des niveauvollen Humors,</p>
+                  <p>der Mann, für den selbst diese Liste noch zu kurz ist.</p>
+                  <p>Für ihn reimt sich immer frisch aufs Maul: Paul</p>
+                </div>
+              </div>
+            </div>
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="ModalHinrich" tabindex="-1" aria-labelledby="ModalHinrichLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="ModalHinrichLabel">Weitere Informationen</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+            </div>
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <div class="row">
+                <!-- Bild von Hinrich -->
+                <div class="col-md-4 offset-md-4 mb-3 mt-2">
+                  <img src="assets/img/chefs/hinrich-2.jpg" class="img-fluid" alt="Hinrich">
+                </div>
+              </div>
+              <div class="row">
+                <!-- Ausführliche Vorstellung -->
+                <div class="col-md-12">
+                  <p>Für ihn hätte Bismarck das Wort Endgegner gebraucht.</p>
+                  <p style="text-align: right;">Er kennt den Unterschied zwischen Jimmy und Daniel Hartwig und war länger als beide zusammen im echten Dschungel.</p>
+                  <p>Er hat mehr Vornamen als der HSV DFB-Pokale.</p>
+                  <p>Er fordert seit Jahrzehnten die Rückkehr von Alexander Ristic als Co-Trainer – denn früher war alles besser.</p>
+                  <p>Seine Tierliebe ist legendär, muss lediglich nur noch entdeckt werden.</p>
+                  <p>Er ist seit seiner Kindheit viel auf der Straße, denn das wahre Podcast-Gold findet er im Dreck. Und Straßen sind aus Dreck gebaut.</p>
+                  <p>Gegen ihn ist selbst Helene Fischer unflexibel – bei ihm passt zwischen „Keine Macht für Niemand“ und „Keine Experimente“ kein Blatt.</p>
+                  <p>Sein Unverständnis klingt für das ungeübte Ohr gern mal wie Begeisterung.</p>
+                  <p>Niemand hat mit mir mehr in den Mund gelegt als er und dies stets zu meinem Vorteil.</p>
+                  <p>Er hantiert mit Taurin sicherer als Gesche Gottfried mit Arsenik.</p>
+                  <p>Er berät Kieser Training zum Thema Haltung.</p>
+                  <p>Er macht regelmäßig die Reisen, die der Grand Tour zu aufregend waren.</p>
+                  <p>Er sorgt für beständige Qualität im Magazin 11Freunde als Auslandskorrespondent.</p>
+                  <p>Seine Analysen sind schärfer als die Beobachtungen des James Webb Teleskops.</p>
+                  <p>In seinem Kinderzimmer hingen Uwe Seeler neben Ho Chi Minh und Sophie Marceau.</p>
+                  <p>Er wollte seine Kinder Carlo, Kurt und Willy nennen. Die Mehrheit kam aber nicht zustande.</p>
+                  <p>Am liebsten trägt er Trikot. Meistens heimlich.</p>
+                  <p>Er hat mehrere Reisepässe, weil er sie braucht.</p>
+                  <p>Er kennt den Unterschied zwischen Hoka und Haka.</p>
+                  <p>Auf seine Folgenvorbereitung ist Felix Magath stolz.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </section>
 
     </section><!-- /Chefs Section -->
@@ -643,6 +781,7 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
