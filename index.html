@@ -707,7 +707,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <p><span>Tipps</span> <span class="description-title">(Coming Soon)</span></p>
+        <p><span>Tipps</span> <span class="description-title"></span></p>
       </div>
       <!-- End Section Title -->
 
@@ -793,7 +793,9 @@
   <script>
     // Karte initialisieren
     const map = L.map('map').setView([51.1657, 10.4515], 6); // Deutschland
-
+     // Marker 3 hinzufügen (Hamburg)
+     const marker3 = L.marker([43.31879955164819, 11.332544051146298]).addTo(map);
+    marker3.bindPopup("<b>Key Largo Bar</b><br>Standort in Siena.");
     // OpenStreetMap Tiles hinzufügen
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
