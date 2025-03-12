@@ -796,20 +796,27 @@
     
     // Marker 3 hinzufügen (Siena)
      const marker3 = L.marker([43.31879955164819, 11.332544051146298]).addTo(map);
-    marker3.bindPopup("<b>Key Largo Bar</b><br>Standort in Siena.");
+    marker3.bindPopup("<b>Key Largo Bar</b><br>Standort in Siena, Italien.");
     // OpenStreetMap Tiles hinzufügen
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
     
     // Marker 4 hinzufügen ()
-    const marker = L.marker([43.31879955164819, 11.332544051146298]).addTo(map);
-    marker3.bindPopup("<b>Key Largo Bar</b><br>Standort in Siena.");
+    const marker4 = L.marker([42.133542472463546, 23.340170442327874]).addTo(map);
+    marker4.bindPopup("<b>Kloster Rila</b><br>Standort in Rila, Bulgarien.");
     // OpenStreetMap Tiles hinzufügen
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
+    // Marker 5 hinzufügen ()
+    const marker5 = L.marker([41.69261160965388, 44.80006252764744]).addTo(map);
+    marker5.bindPopup("<b>Bäckerei</b><br>Standort in Tiblisi, Georgien.");
+    // OpenStreetMap Tiles hinzufügen
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
   </script>
 
 </body>
