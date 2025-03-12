@@ -793,8 +793,17 @@
   <script>
     // Karte initialisieren
     const map = L.map('map').setView([51.1657, 10.4515], 6); // Deutschland
-     // Marker 3 hinzufügen (Hamburg)
+    
+    // Marker 3 hinzufügen (Siena)
      const marker3 = L.marker([43.31879955164819, 11.332544051146298]).addTo(map);
+    marker3.bindPopup("<b>Key Largo Bar</b><br>Standort in Siena.");
+    // OpenStreetMap Tiles hinzufügen
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+    
+    // Marker 4 hinzufügen ()
+    const marker = L.marker([43.31879955164819, 11.332544051146298]).addTo(map);
     marker3.bindPopup("<b>Key Largo Bar</b><br>Standort in Siena.");
     // OpenStreetMap Tiles hinzufügen
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
