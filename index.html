@@ -817,6 +817,22 @@
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
+
+    // Marker 6 hinzufügen ()
+    const marker6 = L.marker([-21.912869061309216, 16.323130171415908]).addTo(map);
+    marker6.bindPopup("<b>Wilhelmstal Farm Stall</b><br>Standort in Wilhelmstal, Namibia.");
+    // OpenStreetMap Tiles hinzufügen
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Marker 7 hinzufügen ()
+    const marker7 = L.marker([0.0389482453385972, 32.46107716930842]).addTo(map);
+    marker7.bindPopup("<b>Aero Beach</b><br>Standort in Entebe, Uganda.");
+    // OpenStreetMap Tiles hinzufügen
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
   </script>
 
 </body>
