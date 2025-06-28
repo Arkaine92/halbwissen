@@ -13,16 +13,31 @@
         var EpisodesPreview = createClass({
             render: function() {
             return h('div', {},
-                h('h1', {}, 'Vorschau der Podcast-Folgen'),
-                this.props.widgetsFor('episodes').map(function(entry, index) {
-                return h('div', { key: index, style: { 
-                    border: "1px solid #ccc", 
-                    padding: "1rem", 
+                h('h1', { style: { marginBottom: "1rem" } }, 'Vorschau der Podcast-Folgen'),
+                this.props.widgetsFor('episodes').map((entry, index) => {
+                const image = entry.getIn(['data', 'image']);
+                const imageURL = this.props.getAsset(image);
+
+                return h('div', {
+                    key: index,
+                    style: {
+                    border: "1px solid #ccc",
+                    padding: "1rem",
                     margin: "1rem 0",
-                    borderRadius: "4px"
-                }},
-                    h('h2', {}, entry.getIn(['data', 'title'])),
-                    h('p', {}, entry.getIn(['data', 'short'])),
+                    borderRadius: "4px",
+                    background: "#f9f9f9"
+                    }
+                },
+                    h('h2', {}, `Folge ${index + 1}: ${entry.getIn(['data', 'title'])}`),
+                    imageURL ? h('img', {
+                    src: imageURL.toString(),
+                    style: {
+                        maxWidth: "100%",
+                        marginBottom: "1rem",
+                        borderRadius: "4px"
+                    }
+                    }) : null,
+                    h('p', { style: { fontWeight: "bold" } }, entry.getIn(['data', 'short'])),
                     h('p', {}, entry.getIn(['data', 'long']))
                 );
                 })
@@ -30,7 +45,6 @@
             }
         });
 
-        // ACHTUNG: Name hier ist der "name" vom file, NICHT der Collection-Name
         CMS.registerPreviewTemplate("episodes", EpisodesPreview);
     </script>
 

@@ -16,13 +16,12 @@ collections:
     format: "yaml"
     files:
       - file: "_data/podcasts.yml"
-        label: "Folgen"
+        label: "Folgenliste"
         name: "episodes"
+        widget: "list"
         fields:
-          - label: "Folgenliste"
-            name: "episodes"
-            widget: "list"
-            fields:
-              - { label: "Titel", name: "title", widget: "string" }
-              - { label: "Kurzbeschreibung", name: "short", widget: "text" }
-              - { label: "Langbeschreibung", name: "long", widget: "text" }
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Kurzbeschreibung", name: "short", widget: "text" }
+          - { label: "Langbeschreibung", name: "long", widget: "text" }
+          - { label: "Bild", name: "image", widget: "image" }
+
