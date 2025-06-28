@@ -26,3 +26,7 @@
     background-color: rgb(60, 131, 202);
     border-color: rgb(40, 105, 170);
 }
+
+.card-text {
+    font-size: 12px;
+}

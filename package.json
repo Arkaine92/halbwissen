@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Arkaine92/halbwissen#readme",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "js-yaml": "^4.1.0"
   }
 }

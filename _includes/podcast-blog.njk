@@ -1,0 +1,40 @@
+<section id="podcasts" class="section light-background">
+  <div class="container">
+    <p class="section-title"><span>Mehr Informationen zu unseren </span><span class="description-title">Podcasts</span></p>
+    <div class="row g-4">
+      {% for episode in podcasts %}
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="{{ episode.image }}" class="card-img-top" alt="{{ episode.title }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ episode.title }}</h5>
+            <p class="card-text">{{ episode.short }}</p>
+            <button type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-{{ loop.index }}">
+              Mehr erfahren
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="modal-{{ loop.index }}" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">{{ episode.title }}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <img src="{{ episode.image }}" class="img-fluid mb-3" alt="{{ episode.title }}">
+              {{ episode.long | trim | replace('\n', '<br>') | safe }}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
