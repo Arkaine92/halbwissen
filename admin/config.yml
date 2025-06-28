@@ -1,8 +1,7 @@
-local_backend: true
+#local_backend: true
 
 backend:
   name: git-gateway
-  #name: test-repo
   branch: cms-version
 
 media_folder: "assets/img/blog"
@@ -18,10 +17,13 @@ collections:
       - file: "_data/podcasts.yml"
         label: "Folgenliste"
         name: "episodes"
-        widget: "list"
         fields:
-          - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Kurzbeschreibung", name: "short", widget: "text" }
-          - { label: "Langbeschreibung", name: "long", widget: "text" }
-          - { label: "Bild", name: "image", widget: "image" }
-
+          - label: "Folgen"
+            name: "episodes"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Kurzbeschreibung", name: "short", widget: "text" }
+              - { label: "Langbeschreibung", name: "long", widget: "text" }
+              - { label: "Bild", name: "image", widget: "image" }
