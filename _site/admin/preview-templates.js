@@ -1,36 +1,17 @@
-import { registerPreviewTemplate } from "decap-cms-app";
-import React from "react";
+// Einfache HTML-Vorschau für jede Episode
+CMS.registerPreviewTemplate("episodes", ({ entry }) => {
+  const data = entry.getIn(["data"]).toJS();
 
-/**
- * Vorschau-Komponente für Podcast-Folgen
- * Diese zeigt jede Episode als Block mit Titel, Kurz- und Langbeschreibung
- */
-const EpisodePreview = ({ entry }) => {
-  // Holt das List-Array aus den Daten
-  const episodes = entry.getIn(["data", "episodes"]) || [];
+  // Falls die Felder leer sind, verhindern wir Fehler
+  const title = data.title || "(kein Titel)";
+  const short = data.short || "";
+  const long = data.long || "";
 
-  return (
-    <div style={{ padding: "2rem", fontFamily: "Arial, sans-serif" }}>
-      <h2>Vorschau – Podcast-Folgen</h2>
-      {episodes.map((episode, idx) => (
-        <div
-          key={idx}
-          style={{
-            border: "1px solid #ddd",
-            borderRadius: "6px",
-            padding: "1rem",
-            marginBottom: "1rem",
-            background: "#f9f9f9"
-          }}
-        >
-          <h3 style={{ marginTop: 0 }}>{episode.get("title")}</h3>
-          <p><strong>Kurzbeschreibung:</strong> {episode.get("short")}</p>
-          <p>{episode.get("long")}</p>
-        </div>
-      ))}
+  return `
+    <div style="font-family: sans-serif; padding: 1rem;">
+      <h1 style="font-size: 1.5rem; color: #333;">${title}</h1>
+      <p style="font-weight: bold; color: #666;">${short}</p>
+      <div style="margin-top: 1rem;">${long.replace(/\n/g, "<br>")}</div>
     </div>
-  );
-};
-
-// Registriere die Preview für die Collection
-registerPreviewTemplate("episodes", EpisodePreview);
+  `;
+});
