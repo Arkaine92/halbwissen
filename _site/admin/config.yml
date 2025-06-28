@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
 
-media_folder: "assets/img/blog"
-public_folder: "/assets/img/blog"
+media_folder: "./assets/img/blog"
+public_folder: "./assets/img/blog"
 
 collections:
   - name: "episodes"
@@ -11,7 +11,7 @@ collections:
     description: "Alle Podcast-Episoden"
     format: "yaml"
     files:
-      - file: "_data/podcasts.yaml"
+      - file: "_data/podcasts.yml"
         label: "Folgen"
         name: "episodes"
         fields:
