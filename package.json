@@ -1,0 +1,24 @@
+{
+  "name": "halbwissen",
+  "version": "1.0.0",
+  "description": "Podcast Bernzen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arkaine92/halbwissen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Arkaine92/halbwissen/issues"
+  },
+  "homepage": "https://github.com/Arkaine92/halbwissen#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

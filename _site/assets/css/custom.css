@@ -1,0 +1,28 @@
+.hero-pod-links-first {
+    padding-left: 160px;
+}
+
+.hero-pod-links {
+    padding-left: 30px;
+}
+
+.fa-icons {
+}
+
+#map {
+    height: 500px;
+}
+
+.modal {
+    --bs-modal-width: 650px;
+}
+
+.btn-primary {
+    background-color: rgb(37,95,152);
+    border-color: rgb(22, 64, 105);
+}
+
+.btn-primary:hover {
+    background-color: rgb(60, 131, 202);
+    border-color: rgb(40, 105, 170);
+}
