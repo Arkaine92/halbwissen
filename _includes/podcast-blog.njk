@@ -4,7 +4,7 @@
   </div>
   <div class="container">
     <div class="row g-4">
-      {% for episode in podcasts %}
+      {% for episode in podcasts.episodes %}
       <div class="col-md-4">
         <div class="card h-100">
           <img src="{{ episode.image }}" class="card-img-top" alt="{{ episode.title }}">
