@@ -1,5 +1,8 @@
+local_backend: true
+
 backend:
   name: git-gateway
+  #name: test-repo
   branch: cms-version
 
 media_folder: "assets/img/blog"
