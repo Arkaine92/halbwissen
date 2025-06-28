@@ -22,4 +22,3 @@ collections:
               - { label: "Titel", name: "title", widget: "string" }
               - { label: "Kurzbeschreibung", name: "short", widget: "text" }
               - { label: "Langbeschreibung", name: "long", widget: "text" }
-              - { label: "Bild", name: "image", widget: "image" }
