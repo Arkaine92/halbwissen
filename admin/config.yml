@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: cms-version
+
+media_folder: "assets/img/blog"
+public_folder: "/assets/img/blog"
+
+collections:
+  - name: "episodes"
+    label: "Podcast-Folgen"
+    label_singular: "Folge"
+    description: "Alle Podcast-Episoden"
+    format: "yaml"
+    files:
+      - file: "_data/podcasts.yaml"
+        label: "Folgen"
+        name: "episodes"
+        fields:
+          - label: "Folgenliste"
+            name: "episodes"
+            widget: "list"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Kurzbeschreibung", name: "short", widget: "text" }
+              - { label: "Langbeschreibung", name: "long", widget: "text" }
+              - { label: "Bild", name: "image", widget: "image" }

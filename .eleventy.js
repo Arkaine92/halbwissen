@@ -5,6 +5,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./assets");
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
   eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
+  eleventyConfig.addPassthroughCopy("./admin");
 
 
   return {
