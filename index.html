@@ -703,9 +703,36 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <form action="mailto:info@ungefaehrliches-halbwissen.de" method="post" enctype="text/plain" class="row g-3">
+              <div class="col-md-6">
+                <label for="inputName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="inputName" name="Name" required>
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail" class="form-label">E-Mail</label>
+                <input type="email" class="form-control" id="inputEmail" name="Email" required>
+              </div>
+              <div class="col-12">
+                <label for="inputSubject" class="form-label">Betreff</label>
+                <input type="text" class="form-control" id="inputSubject" name="Subject">
+              </div>
+              <div class="col-12">
+                <label for="inputMessage" class="form-label">Nachricht</label>
+                <textarea class="form-control" id="inputMessage" name="Message" rows="5" required></textarea>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary">Nachricht senden</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title pt-5" data-aos="fade-up">
         <p><span>Tipps</span> <span class="description-title"></span></p>
       </div>
       <!-- End Section Title -->
